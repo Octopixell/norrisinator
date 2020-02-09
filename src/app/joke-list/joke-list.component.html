@@ -1,1 +1,4 @@
-<p>joke-list works!</p>
+<button (click)="getJokes()">Click this button, cause Chuck Norris always has more jokes than you!</button>
+<ul>
+  <li *ngFor="let joke of jokes;"><app-joke [joke]="joke"></app-joke></li>
+</ul>

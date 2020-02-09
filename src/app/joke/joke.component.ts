@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Joke } from '../interfaces/joke';
 
 @Component({
   selector: 'app-joke',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./joke.component.scss']
 })
 export class JokeComponent implements OnInit {
+  @Input() joke: Joke;
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }

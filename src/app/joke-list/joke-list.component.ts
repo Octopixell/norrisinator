@@ -15,7 +15,10 @@ export class JokeListComponent implements OnInit, OnDestroy {
   constructor(private jokeService: JokeService) { }
 
   ngOnInit(): void {
-    this.jokeSub = this.jokeService.getRandomJokes().subscribe((response) => {
+  }
+
+  getJokes(): void {
+    this.jokeSub = this.jokeService.getRandomJokes(10).subscribe((response) => {
       if (response.type === 'success') {
         this.jokes = response.value;
       }
