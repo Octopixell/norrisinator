@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JokeService } from './shared/joke.service';
 import { HttpClientModule } from '@angular/common/http';
+import { JokesComponent } from './jokes/jokes.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    JokesComponent
   ],
   imports: [
     BrowserModule,
