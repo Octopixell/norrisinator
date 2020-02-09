@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Joke } from '../interfaces/joke';
+import { JokeService } from '../shared/joke.service';
 
 @Component({
   selector: 'app-joke',
@@ -9,8 +10,12 @@ import { Joke } from '../interfaces/joke';
 export class JokeComponent implements OnInit {
   @Input() joke: Joke;
 
-  constructor() { }
+  constructor(private jokeService: JokeService) { }
 
   ngOnInit() {
+  }
+
+  markAsFavorite(): void {
+    this.jokeService.markJokeAsFavorite(this.joke);
   }
 }
