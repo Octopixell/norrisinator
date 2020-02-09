@@ -8,11 +8,9 @@ import { JokeApiResponse } from '../interfaces/joke-api-response';
   providedIn: 'root'
 })
 export class JokeService {
-
   constructor(private http: HttpClient) { }
 
   getRandomJokes(amount: number = 1): Observable<JokeApiResponse> {
     return this.http.get<JokeApiResponse>(`${environment.jokeApiUrl}/random/${amount}`);
   }
-
 }
