@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { JokesComponent } from './jokes/jokes.component';
+import { JokeListComponent } from './joke-list/joke-list.component';
 
 const routes: Routes = [
-  { path: '', component: JokesComponent },
-  { path: '**', component: JokesComponent }
+  { path: '', component: JokeListComponent },
+  { path: '**', component: JokeListComponent }
 ];
 
 @NgModule({
