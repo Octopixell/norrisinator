@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Joke } from '../interfaces/joke';
 import { JokeService } from '../shared/joke.service';
-import { faTrashAlt, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-joke',
@@ -11,10 +11,16 @@ import { faTrashAlt, faHeart } from '@fortawesome/free-solid-svg-icons';
 export class JokeComponent implements OnInit {
   @Input() joke: Joke;
   heartIcon = faHeart;
+  text: string;
 
   constructor(private jokeService: JokeService) { }
 
   ngOnInit() {
+    this.text = this.getText();
+  }
+
+  getText(): string {
+    return this.joke.joke.replace(/&quot;/g, '"');
   }
 
   markAsFavorite(): void {
