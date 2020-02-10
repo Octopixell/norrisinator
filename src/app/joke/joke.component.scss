@@ -1,0 +1,15 @@
+:host {
+  background: #2E3532;
+  color: #FFF;
+  margin: 0 0 15px;
+  padding: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-direction: row;
+  display: flex;
+}
+p {
+  margin: 0;
+  flex-basis: 75%;
+  padding: 0 15px 0 0;
+}
