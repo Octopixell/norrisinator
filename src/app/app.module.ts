@@ -7,6 +7,7 @@ import { JokeService } from './shared/joke.service';
 import { HttpClientModule } from '@angular/common/http';
 import { JokeListComponent } from './joke-list/joke-list.component';
 import { JokeComponent } from './joke/joke.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { JokeComponent } from './joke/joke.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [JokeService],
   bootstrap: [AppComponent]
