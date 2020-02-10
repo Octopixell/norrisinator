@@ -15,6 +15,7 @@ export class JokeListComponent implements OnInit, OnDestroy {
   constructor(private jokeService: JokeService) { }
 
   ngOnInit(): void {
+    this.getJokes();
   }
 
   getJokes(): void {
